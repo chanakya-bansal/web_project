@@ -1,0 +1,63 @@
+<html>
+<head>
+    <title>Contact Me</title>
+</head>
+
+<body >
+
+<h1>Contact Me</h1>
+<p>Please fill in the form below. Fields marked with * are mandatory.</p>
+
+<form action="index.html" method="GET">
+
+    <label for="name">Full Name *</label><br>
+    <input type="text" id="name" name="name" required minlength="3"><br><br>
+
+    <label for="email">Email Address *</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="topic">Topic *</label><br>
+    <select id="topic" name="topic" required>
+        <option value="">-- Select a topic --</option>
+        <option value="general">General Inquiry</option>
+        <option value="project">Project Proposal</option>
+        <option value="collaboration">Collaboration</option>
+        <option value="support">Support</option>
+    </select><br><br>
+
+    <p>Urgency *</p>
+    <input type="radio" id="low" name="urgency" value="low" required>
+    <label for="low">Low</label><br>
+
+    <input type="radio" id="medium" name="urgency" value="medium">
+    <label for="medium">Medium</label><br>
+
+    <input type="radio" id="high" name="urgency" value="high">
+    <label for="high">High</label><br><br>
+
+    <p>Preferred Contact Method *</p>
+    <input type="checkbox" id="contact_email" name="contact_method" value="email" required>
+    <label for="contact_email">Email</label><br>
+
+    <input type="checkbox" id="contact_phone" name="contact_method" value="phone">
+    <label for="contact_phone">Phone</label><br><br>
+
+    <label for="phone">Phone Number (10 digits)</label><br>
+    <input type="number" id="phone" name="phone" min="1000000000" max="9999999999"><br><br>
+
+    <label for="budget">Estimated Budget (₹100 – ₹1,000,000)</label><br>
+    <input type="number" id="budget" name="budget" min="100" max="1000000" step="100"><br><br>
+
+    <label for="message">Message *</label><br>
+    <textarea id="message" name="message" required minlength="10" rows="5" cols="40"></textarea><br><br>
+
+    <input type="checkbox" id="agree" name="agree" required>
+    <label for="agree">I confirm that the information provided is accurate *</label><br><br>
+
+    <input type="submit" value="Send Message">
+    <input type="reset" value="Clear Form">
+
+</form>
+
+</body>
+</html>
